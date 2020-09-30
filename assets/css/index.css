@@ -1,0 +1,76 @@
+/* General Styles */
+@import url('https://fonts.googleapis.com/css2?family=IM+Fell+DW+Pica:ital@1&family=IM+Fell+English+SC&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    text-align: center;
+    font-family: 'IM Fell DW Pica', 'IM Fell English SC' ,sans-serif;
+    border: 10px solid yellow;
+    margin: 0;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 15px;
+}
+
+/* Header Styles */
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1rem;
+}
+
+h1 {
+    font-size: 10vmin;
+    margin-bottom: 10px;
+}
+
+h4 {
+    margin-top: 0;
+}
+
+/* Poster Section Styles */
+.posters {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(15rem, auto));
+}
+
+.item {
+    margin: 1rem;
+    position: relative;
+}
+
+.item:hover img {
+    opacity: 0;
+    transition: opacity 500ms ease-in;
+}
+
+.item:hover figcaption,
+.item:focus figcaption {
+    display: block;
+    outline: none;
+}
+
+figcaption {
+    position: absolute;
+    top: 30%;
+    display: none;
+}
+
+figcaption::before {
+    content: open-quote;
+    font-size: 50px;
+    padding-right: 2rem;
+}
+
+figcaption:after {
+    content: close-quote;
+    font-size: 50px;
+    padding-left: 2rem;
+}
